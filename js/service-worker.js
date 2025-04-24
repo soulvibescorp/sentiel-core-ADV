@@ -20,3 +20,24 @@ self.addEventListener("fetch", e => {
     caches.match(e.request).then(response => response || fetch(e.request))
   );
 });
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('sentinelcore-cache-v1').then(cache => {
+      return cache.addAll([
+        'terminal.html',
+        'js/terminalHandler.js',
+        'css/terminal.css',
+        'manifest.json',
+        'icons/icon-192.png',
+        'icons/icon-512.png'
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(resp => resp || fetch(event.request))
+  );
+});
