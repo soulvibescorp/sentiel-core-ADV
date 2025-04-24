@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelCore Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo.svg" alt="SentinelCore Logo" />
+    <h1>SentinelCore</h1>
+    <p>Secure. Monitor. Protect.</p>
+  </header>
+
+  <main>
+    <section id="encryption">
+      <h2>File Encryption</h2>
+      <input type="file" id="encryptFile" />
+      <button onclick="encryptFile()">Encrypt</button>
+      <button onclick="decryptFile()">Decrypt</button>
+      <p id="encryptionStatus"></p>
+    </section>
+
+    <section id="firewall">
+      <h2>Firewall Simulation</h2>
+      <input type="number" id="portInput" placeholder="Enter Port Number" />
+      <button onclick="checkPort()">Check Port</button>
+      <p id="firewallStatus"></p>
+    </section>
+
+    <section id="antivirus">
+      <h2>Antivirus Scan</h2>
+      <input type="file" id="scanFile" />
+      <button onclick="scanFile()">Scan</button>
+      <p id="scanStatus"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SentinelCore. All rights reserved.</p>
+  </footer>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

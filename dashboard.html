@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelCore Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+
+</head>
+<body>
+  <script>
+  if (!localStorage.getItem("sentinel_user")) {
+    window.location.href = "login.html";
+  }
+</script>
+
+  <!-- Add this anywhere on your dashboard -->
+<button onclick="switchToTerminal()">Launch Terminal Mode</button>
+<script src="js/modeToggle.js"></script>
+
+  <nav class="nav-bar">
+    <h2>🛡️ SentinelCore</h2>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <main class="dashboard-grid">
+    <section class="card" onclick="goTo('encryption.html')">
+      🔐 File Vault<br/><small>Encrypt/Decrypt Files</small>
+    </section>
+    <section class="card" onclick="goTo('firewall.html')">
+      🔥 Firewall Simulator<br/><small>Block/Allow Ports</small>
+    </section>
+    <section class="card" onclick="goTo('scanner.html')">
+      🦠 Virus Scan<br/><small>Check Suspicious Files</small>
+    </section>
+    <section class="activity-log">
+  <h3>📝 Activity Log</h3>
+  <ul id="activityLogList"></ul>
+</section>
+
+  </main>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('sentinel_auth');
+      window.location.href = 'index.html';
+    }
+
+    function goTo(page) {
+      window.location.href = page;
+    }
+
+    // Auth check
+    if (localStorage.getItem('sentinel_auth') !== 'logged_in') {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

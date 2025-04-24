@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelCore – Firewall</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav-bar">
+    <h2>🔥 SentinelCore – Firewall Control</h2>
+    <button onclick="window.location.href='dashboard.html'">⬅ Dashboard</button>
+  </nav>
+
+  <main class="firewall-container">
+    <h3>Port Access Control</h3>
+    
+    <input type="number" id="portInput" placeholder="Enter port (e.g. 80, 443)" />
+    <button onclick="addRule('block')">Block</button>
+    <button onclick="addRule('allow')">Allow</button>
+
+    <h4>Firewall Rules:</h4>
+    <ul id="rulesList"></ul>
+  </main>
+
+  <script src="js/firewall.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background: #1e1e1e;
+  color: #33ff33;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+#terminal {
+  width: 100vw;
+  height: 90vh;
+  padding: 10px;
+}
+button {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
