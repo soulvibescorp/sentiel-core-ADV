@@ -30,7 +30,11 @@
       <button onclick="checkPort()">Check Port</button>
       <p id="firewallStatus"></p>
     </section>
-
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
     <section id="antivirus">
       <h2>Antivirus Scan</h2>
       <input type="file" id="scanFile" />
