@@ -80,3 +80,32 @@ function switchTheme(theme) {
   link.href = `css/themes/${theme}.css`;
   term.writeln(`🎨 Theme switched to ${theme}`);
 }
+case 'encrypt':
+  term.writeln('📂 Select a file to simulate encryption...');
+  document.getElementById('fileInput').click();
+  document.getElementById('fileInput').onchange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      term.writeln(`🔐 Encrypting "${file.name}"...`);
+      setTimeout(() => {
+        const fakeHash = btoa(file.name + Date.now()).slice(0, 16);
+        term.writeln(`✅ Encrypted Output: ${fakeHash}.enc`);
+      }, 1000);
+    }
+  };
+  break;
+
+case 'decrypt':
+  term.writeln('📂 Select a file to simulate decryption...');
+  document.getElementById('fileInput').click();
+  document.getElementById('fileInput').onchange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      term.writeln(`🔓 Decrypting "${file.name}"...`);
+      setTimeout(() => {
+        const originalName = file.name.replace('.enc', '');
+        term.writeln(`✅ Decrypted Output: ${originalName}`);
+      }, 1000);
+    }
+  };
+  break;
