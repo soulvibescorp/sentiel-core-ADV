@@ -75,6 +75,11 @@ function runCommand(cmd) {
   }
 }
 
+function showSystemAlert(message) {
+  term.writeln(`\x1b[31m🚨 ALERT: ${message}\x1b[0m`);
+}
+
+
 function switchTheme(theme) {
   const link = document.getElementById('theme-style');
   link.href = `css/themes/${theme}.css`;
