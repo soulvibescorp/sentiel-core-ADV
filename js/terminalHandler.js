@@ -32,6 +32,10 @@ term.onData(e => {
       commandBuffer += e;
   }
 });
+setTimeout(() => showSystemAlert("Unauthorized port scan attempt detected."), 5000);
+case 'triggeralert':
+  showSystemAlert("Manual intrusion simulation triggered.");
+  break;
 
 function prompt() {
   term.write('\r\n> ');
