@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelCore – Virus Scanner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav-bar">
+    <h2>🦠 SentinelCore – Virus Scanner</h2>
+    <button onclick="window.location.href='dashboard.html'">⬅ Dashboard</button>
+  </nav>
+
+  <main class="scanner-container">
+    <h3>Mock File Virus Scan</h3>
+    <input type="file" id="fileToScan" />
+    <button onclick="scanFile()">Scan File</button>
+    <p id="scanResult"></p>
+  </main>
+
+  <script src="js/scanner.js"></script>
+</body>
+</html>

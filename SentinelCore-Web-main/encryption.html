@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelCore – File Vault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav-bar">
+    <h2>🔐 SentinelCore – File Vault</h2>
+    <button onclick="window.location.href='dashboard.html'">⬅ Dashboard</button>
+  </nav>
+
+  <main class="vault-container">
+    <h3>Encrypt or Decrypt Files Locally</h3>
+    
+    <label>Enter Password:</label>
+    <input type="password" id="vaultPassword" placeholder="Strong password" />
+
+    <div class="vault-actions">
+      <input type="file" id="fileInput" />
+      <button onclick="encryptFile()">Encrypt</button>
+      <button onclick="decryptFile()">Decrypt</button>
+    </div>
+
+    <p id="vaultStatus"></p>
+  </main>
+
+  <script src="js/encryption.js"></script>
+</body>
+</html>

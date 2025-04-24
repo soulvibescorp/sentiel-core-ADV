@@ -1,0 +1,161 @@
+/* === BODY STYLING === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* Deep dark theme */
+  color: #00ffcc; /* Neon turquoise accent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* === HEADER === */
+header {
+  background-color: #1e293b;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 50px;
+}
+
+/* === NAV BAR === */
+.nav-bar {
+  background: #101020;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00ffcc;
+  border-bottom: 1px solid #00ffcc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* === MAIN & SECTIONS === */
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: #1e293b;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* === LOGIN CONTAINER === */
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0 0 30px #00ffcc44;
+}
+
+/* === INPUTS === */
+input {
+  background: #111;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 10px;
+  margin: 8px 0;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.firewall-container input {
+  width: auto;
+}
+
+/* === BUTTONS === */
+button {
+  background-color: transparent;
+  color: #00ffcc;
+  border: 1px solid #00ffcc;
+  padding: 10px;
+  margin: 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* === DASHBOARD === */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+  padding: 2em;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2em;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffcc33;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00ffcc66;
+}
+
+/* === VAULT SECTION === */
+.vault-container {
+  text-align: center;
+  padding: 2em;
+}
+
+.vault-actions {
+  margin: 1em 0;
+}
+
+#vaultPassword, #fileInput {
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 60%;
+  max-width: 300px;
+}
+
+/* === FIREWALL SECTION === */
+.firewall-container {
+  padding: 2em;
+  text-align: center;
+}
+
+.firewall-container input, .firewall-container button {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+#rulesList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+#rulesList li {
+  margin: 0.4em 0;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #1e293b;
+  text-align: center;
+  padding: 10px;
+}
